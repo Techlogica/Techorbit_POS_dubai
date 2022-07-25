@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/homeFragment"
+        android:checkableBehavior="single">
+        <item
+            android:icon="@drawable/wallet"
+            android:id="@+id/wallet_report"
+            android:title="Wallet Report" />
+    </group>
+<!--    <group-->
+<!--        android:id="@+id/transactionFragment"-->
+<!--        android:checkableBehavior="single">-->
+<!--        <item-->
+<!--            android:icon="@drawable/reciept_report"-->
+<!--            android:id="@+id/transaction_report"-->
+<!--            android:title="Transaction Report" />-->
+<!--    </group>-->
+    <group
+        android:id="@+id/terminal"
+        android:checkableBehavior="single">
+        <item
+            android:icon="@drawable/reciept_report"
+            android:id="@+id/terminal_sales_report"
+            android:title="Merchant sales summary report" />
+    </group>
+<!--    <group-->
+<!--        android:id="@+id/merchant"-->
+<!--        android:checkableBehavior="single">-->
+<!--        <item-->
+<!--            android:icon="@drawable/reciept_report"-->
+<!--            android:id="@+id/merchant_sales_report"-->
+<!--            android:title="Merchant sales summary report" />-->
+<!--    </group>-->
+    <group
+        android:icon="@drawable/reciept_report"
+        android:id="@+id/purchase"
+        android:checkableBehavior="single">
+        <item
+            android:icon="@drawable/reciept_report"
+            android:id="@+id/purchase_report"
+            android:title="Purchase report" />
+    </group>
+
+<!--    <group-->
+<!--        android:id="@+id/reciept"-->
+<!--        android:checkableBehavior="single">-->
+<!--        <item-->
+<!--            android:icon="@drawable/reciept_report"-->
+<!--            android:id="@+id/reciept_report"-->
+<!--            android:title="Receipt report" />-->
+<!--    </group>-->
+    <group
+        android:id="@+id/vendor"
+        android:checkableBehavior="single">
+        <item
+            android:icon="@drawable/reciept_report"
+            android:id="@+id/vendor_outstanding_report"
+            android:title="Vendor outstanding report" />
+
+    </group>
+
+    <group
+        android:id="@+id/inventory"
+        android:checkableBehavior="single">
+        <item
+            android:icon="@drawable/reciept_report"
+            android:id="@+id/inventory_report"
+            android:title="Inventory report" />
+    </group>
+
+    <group
+        android:id="@+id/reciepet"
+        android:checkableBehavior="single">
+        <item
+            android:icon="@drawable/reciept_report"
+            android:id="@+id/reciepet_report"
+            android:title="Reciept report" />
+    </group>
+
+
+    <group
+        android:id="@+id/recharge_terminal"
+        android:checkableBehavior="single">
+        <item
+            android:icon="@drawable/reciept_report"
+            android:id="@+id/recharge_terminal_report"
+            android:title="Terminal report" />
+    </group>
+
+
+</menu>

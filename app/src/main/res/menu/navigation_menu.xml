@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/profile_group"
+        android:checkableBehavior="single">
+        <item
+            android:icon="@drawable/nav_profile"
+            android:id="@+id/profileFragment"
+            android:title="Profile" />
+    </group>
+    <group
+        android:id="@+id/pin_group"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/pin"
+            android:icon="@drawable/pin_downld"
+            android:title="Pin Download" />
+    </group>
+    <group
+        android:id="@+id/change_pass_group"
+        android:checkableBehavior="single">
+        <item
+            android:icon="@drawable/nav_change_passwrd"
+            android:id="@+id/changePassword"
+            android:title="Change Password" />
+    </group>
+    <group
+        android:id="@+id/complaint_group"
+        android:checkableBehavior="single">
+        <item
+            android:icon="@drawable/nav_post_comment"
+            android:id="@+id/complaint"
+            android:title="Post a complaint" />
+    </group>
+    <group
+        android:id="@+id/logout_group"
+        android:checkableBehavior="single">
+        <item
+            android:icon="@drawable/nav_logout"
+            android:id="@+id/logout"
+            android:title="Logout" />
+    </group>
+
+
+</menu>

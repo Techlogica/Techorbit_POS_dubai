@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "128756415983",
+    "project_id": "techorbit-2d458",
+    "storage_bucket": "techorbit-2d458.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:128756415983:android:e2a5f47ab06a4c44270a1a",
+        "android_client_info": {
+          "package_name": "com.example.techorbit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "128756415983-5vi73gmjvu5b16bo390ah1bm1mt0bnii.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUlbZqxEw1hrx4SmJAdV3FncHtyMUSD-g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "128756415983-5vi73gmjvu5b16bo390ah1bm1mt0bnii.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

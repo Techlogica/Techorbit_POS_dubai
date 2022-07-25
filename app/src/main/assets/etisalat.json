@@ -1,0 +1,63 @@
+{
+  "response_code": 100,
+  "error_message": "-",
+  "syncVersion": 0,
+  "flushStatus": 0,
+  "rechargeSubTypes1": {
+    "subType0": "recharge",
+    "subType1": "downloaded"
+  },
+  "rechargeSubTypes2": [
+    "recharge",
+    "downloaded"
+  ],
+  "service": "ETISALAT",
+  "rechargeCount": 5,
+  "downlodedRechargeCount": 0,
+  "operatingCurrency": "AED",
+  "data": {
+    "recharge": [
+      {
+        "planId": 12,
+        "downlodedCount": 0,
+        "mrp": "15",
+        "localAmount": "15",
+        "benefits": "Etisalat INTER-CONTINENT calling card-15",
+        "localCurrency": "AED"
+      },
+      {
+        "planId": 13,
+        "downlodedCount": 0,
+        "mrp": "30",
+        "localAmount": "30",
+        "benefits": "Etisalat EVOS calling card-30",
+        "localCurrency": "AED"
+      },
+      {
+        "planId": 14,
+        "downlodedCount": 0,
+        "mrp": "55",
+        "localAmount": "55",
+        "benefits": "Etisalat EVOS calling card-55",
+        "localCurrency": "AED"
+      },
+      {
+        "planId": 15,
+        "downlodedCount": 0,
+        "mrp": "110",
+        "localAmount": "110",
+        "benefits": "Etisalat EVOS calling card-110",
+        "localCurrency": "AED"
+      },
+      {
+        "planId": 16,
+        "downlodedCount": 0,
+        "mrp": "210",
+        "localAmount": "210",
+        "benefits": "Etisalat EVOS calling card-210",
+        "localCurrency": "AED"
+      }
+    ],
+    "downloded": []
+  }
+}

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="loginviewmodel"
+            type="com.example.techorbit.viewmodel.LoginViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:showIn="@layout/activity_sign_up">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent">
+
+<!--            <EditText-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:background="@drawable/registration_bg"-->
+<!--                android:gravity="center"-->
+<!--                android:hint="usenname"-->
+<!--                android:padding="10dp"-->
+<!--                android:singleLine="true"-->
+<!--                android:text="@={loginviewmodel.username}"-->
+<!--                android:textSize="18sp" />-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxBackgroundMode="outline"
+                android:background="@drawable/registration_bg"
+                android:layout_marginTop="20dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:hint="username"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:text="@={loginviewmodel.username}"
+                    android:textSize="18sp"
+                    android:background="@android:color/transparent">
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:passwordToggleEnabled="true"
+                app:boxBackgroundMode="outline"
+                android:background="@drawable/registration_bg"
+                android:layout_marginTop="20dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:hint="password"
+                    android:padding="10dp"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:text="@={loginviewmodel.password}"
+                    android:textSize="18sp"
+                    android:background="@android:color/transparent">
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+<!--
+    <EditText-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:background="@drawable/registration_bg"-->
+<!--                android:gravity="center"-->
+<!--                android:hint="password"-->
+<!--                android:padding="10dp"-->
+<!--                android:singleLine="true"-->
+<!--                android:text="@={loginviewmodel.password}"-->
+<!--                android:textSize="18sp" />-->
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/dark_red"
+                android:padding="15dp"
+                android:text="login"
+                android:textColor="@color/white"
+                app:cornerRadius="20dp" />
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

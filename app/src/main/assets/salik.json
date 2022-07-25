@@ -1,0 +1,47 @@
+{
+  "response_code": 100,
+  "error_message": "-",
+  "syncVersion": 0,
+  "flushStatus": 0,
+  "rechargeSubTypes1": {
+    "subType0": "recharge",
+    "subType1": "downloaded"
+  },
+  "rechargeSubTypes2": [
+    "recharge",
+    "downloaded"
+  ],
+  "service": "SALIK",
+  "rechargeCount": 3,
+  "downlodedRechargeCount": 0,
+  "operatingCurrency": "AED",
+  "data": {
+    "recharge": [
+      {
+        "planId": 9,
+        "downlodedCount": 0,
+        "mrp": "50",
+        "localAmount": "50",
+        "benefits": "Salik Recharge Card-50",
+        "localCurrency": "AED"
+      },
+      {
+        "planId": 10,
+        "downlodedCount": 0,
+        "mrp": "100",
+        "localAmount": "100",
+        "benefits": "Salik Recharge Card-100",
+        "localCurrency": "AED"
+      },
+      {
+        "planId": 11,
+        "downlodedCount": 0,
+        "mrp": "200",
+        "localAmount": "200",
+        "benefits": "Salik Recharge Card-200",
+        "localCurrency": "AED"
+      }
+    ],
+    "downloded": []
+  }
+}

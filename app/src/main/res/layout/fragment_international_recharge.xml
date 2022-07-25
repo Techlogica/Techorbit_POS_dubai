@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.techorbit.viewmodel.CountryViewmodel" />
+        <variable
+            name="click"
+            type="com.example.techorbit.ui.fragment.InternationalRecharge.ClickHandeler" />
+
+   <variable
+       name="adapter"
+       type="android.widget.ArrayAdapter" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:nestedScrollingEnabled="true"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg">
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/progress_circular"
+                style="Widget.MaterialComponents.CircularProgressIndicator.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                app:indicatorColor="@color/red"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/banner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    app:srcCompat="@drawable/international_recharge_banner" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/banner"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="100dp"
+                        android:layout_height="1dp"
+                        android:background="@color/red" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:gravity="center"
+                        android:text="International\nRecharge"
+                        android:textColor="@color/red"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:layout_width="100dp"
+                        android:layout_height="1dp"
+                        android:background="@color/red" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/change_password_bg"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:hint="select country "
+                    android:padding="8dp"
+                    android:singleLine="true"
+                    android:text="@{viewmodel.countryname}"
+                    android:onClick="@{click::selectCountry}"
+                    android:drawableRight="@drawable/ic_down_arrow"
+                    android:textSize="18sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/change_password_bg">
+                    <TextView
+                        android:id="@+id/abrevation"
+                        android:text="@{viewmodel.abrevation}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/phone"/>
+
+                    <EditText
+                        android:id="@+id/phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:hint="Enter phone number"
+                        android:inputType="number"
+                        android:padding="8dp"
+                        android:singleLine="true"
+                        android:text="@={viewmodel.phonenumber}"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+
+
+<!--                <EditText-->
+<!--                    android:id="@+id/provider"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="20dp"-->
+<!--                    android:background="@drawable/change_password_bg"-->
+<!--                    android:gravity="center"-->
+<!--                    android:hint="Select Providers"-->
+<!--                    android:drawableRight="@drawable/ic_down_arrow"-->
+<!--                    android:padding="15dp"-->
+<!--                    android:text="@{viewmodel.operator}"-->
+<!--                    android:singleLine="true"-->
+<!--                    android:textSize="18sp" />-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/select_provider"
+                    android:visibility="gone"
+                    android:background="@drawable/change_password_bg">
+
+
+                    <EditText
+                        android:id="@+id/provider"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@null"
+                        android:drawableRight="@drawable/ic_down_arrow"
+                        android:editable="false"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:hint="Select Providers"
+                        android:padding="8dp"
+                        android:singleLine="true"
+                        android:text="@{viewmodel.operator}"
+                        android:textSize="18sp" />
+
+<!--                    <androidx.appcompat.widget.AppCompatSpinner-->
+<!--                        android:id="@+id/spinner"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:onItemSelected="@{click::click}"-->
+<!--                        android:textColor="@color/green"-->
+<!--                        android:gravity="center"-->
+<!--                        android:visibility="gone"-->
+<!--                        android:layout_centerInParent="true"-->
+<!--                        app:adapter="@{adapter}"/>-->
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/chageprovider"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="change"
+                    android:layout_gravity="end"
+                    android:textSize="20sp"
+                    android:visibility="gone"
+                    android:layout_marginTop="3dp"
+                    android:padding="0dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/robotobold"
+                    android:layout_marginRight="10dp"/>
+
+
+                <EditText
+                    android:id="@+id/plan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/change_password_bg"
+                    android:gravity="center"
+                    android:hint="Recharge Plan"
+                    android:focusable="false"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:padding="8dp"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/cal_culatemount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:visibility="gone"
+                    android:text="@={viewmodel.calculateValue}"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/black"/>
+
+
+                <RelativeLayout
+                    android:id="@+id/usr_value_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:visibility="gone"
+                    android:background="@drawable/change_password_bg">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="AED"
+                        android:textColor="@color/black"
+                        android:layout_toLeftOf="@+id/usr_value"/>
+
+                    <EditText
+                        android:id="@+id/usr_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="5dp"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:hint="Enter your Amount"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:singleLine="true"
+                        android:text="@={viewmodel.usrValue}"
+                        android:textSize="18sp"
+                        android:visibility="visible" />
+                </RelativeLayout>
+
+
+
+
+                <TextView
+                    android:id="@+id/show_all_plan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="18sp"
+                    android:padding="10dp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/red"
+                    android:onClick="@{click::submit}"
+                    android:text="Proceed to Pay"
+                    android:textColor="@color/white"
+                    app:cornerRadius="20dp"/>
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

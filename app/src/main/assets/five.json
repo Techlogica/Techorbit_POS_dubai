@@ -1,0 +1,47 @@
+{
+  "response_code": 100,
+  "error_message": "-",
+  "syncVersion": 0,
+  "flushStatus": 0,
+  "rechargeSubTypes1": {
+    "subType0": "recharge",
+    "subType1": "downloaded"
+  },
+  "rechargeSubTypes2": [
+    "recharge",
+    "downloaded"
+  ],
+  "service": "FIVE",
+  "rechargeCount": 3,
+  "downlodedRechargeCount": 0,
+  "operatingCurrency": "AED",
+  "data": {
+    "recharge": [
+      {
+        "planId": 5,
+        "downlodedCount": 0,
+        "mrp": "15",
+        "localAmount": "15",
+        "benefits": "Five Calling Card-15",
+        "localCurrency": "AED"
+      },
+      {
+        "planId": 6,
+        "downlodedCount": 0,
+        "mrp": "30",
+        "localAmount": "30",
+        "benefits": "Five Calling Card-30",
+        "localCurrency": "AED"
+      },
+      {
+        "planId": 7,
+        "downlodedCount": 0,
+        "mrp": "50",
+        "localAmount": "50",
+        "benefits": "Five Calling Card-50",
+        "localCurrency": "AED"
+      }
+    ],
+    "downloded": []
+  }
+}

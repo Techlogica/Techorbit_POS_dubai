@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.techorbit.ui.fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_internationalRecharge"
+            app:destination="@id/internationalRecharge" />
+        <action
+            android:id="@+id/action_homeFragment_to_evoucherFragment"
+            app:destination="@id/evoucherFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_otarFragment"
+            app:destination="@id/otarFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_countryFragment"
+            app:destination="@id/countryFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_gamesAndGiftCards"
+            app:destination="@id/gamesAndGiftCards" />
+    </fragment>
+    <fragment
+        android:id="@+id/transactionFragment"
+        android:name="com.example.techorbit.ui.fragment.TransactionFragment"
+        android:label="fragment_transaction"
+        tools:layout="@layout/fragment_transaction" />
+    <fragment
+        android:id="@+id/seachFragment"
+        android:name="com.example.techorbit.ui.fragment.SeachFragment"
+        android:label="fragment_seach"
+        tools:layout="@layout/fragment_seach" />
+    <fragment
+        android:id="@+id/changePassword"
+        android:name="com.example.techorbit.ui.fragment.ChangePassword"
+        android:label="fragment_change_password"
+        tools:layout="@layout/fragment_change_password" />
+    <fragment
+        android:id="@+id/searchTransaction"
+        android:name="com.example.techorbit.ui.fragment.SearchTransaction"
+        android:label="fragment_search_transaction"
+        tools:layout="@layout/fragment_search_transaction" >
+        <action
+            android:id="@+id/action_searchTransaction_to_searchTransactionInnerFragment"
+            app:destination="@id/searchTransactionInnerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/reportFragment"
+        android:name="com.example.techorbit.ui.fragment.ReportFragment"
+        android:label="fragment_report"
+        tools:layout="@layout/fragment_report" />
+    <fragment
+        android:id="@+id/internationalRecharge"
+        android:name="com.example.techorbit.ui.fragment.InternationalRecharge"
+        android:label="fragment_international_recharge"
+        tools:layout="@layout/fragment_international_recharge" >
+        <action
+            android:id="@+id/action_internationalRecharge_to_countryFragment"
+            app:destination="@id/countryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.example.techorbit.ui.fragment.NotificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/walletFragment"
+        android:name="com.example.techorbit.ui.fragment.Wallet"
+        android:label="fragment_wallet"
+        tools:layout="@layout/fragment_wallet" />
+    <fragment
+        android:id="@+id/countryFragment"
+        android:name="com.example.techorbit.ui.fragment.CountryFragment"
+        android:label="fragment_country"
+        tools:layout="@layout/fragment_country" >
+
+        <action
+            android:id="@+id/action_countryFragment_to_internationalRecharge"
+            app:destination="@id/internationalRecharge"
+            app:popUpTo="@+id/internationalRecharge"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/etisatEvoucherFragment"
+        android:name="com.example.techorbit.ui.fragment.EtisatEvoucherFragment"
+        android:label="fragment_etisat_evoucher"
+        tools:layout="@layout/fragment_etisat_evoucher" />
+    <fragment
+        android:id="@+id/evoucherFragment"
+        android:name="com.example.techorbit.ui.fragment.EvoucherFragment"
+        android:label="fragment_evoucher"
+        tools:layout="@layout/fragment_evoucher" />
+    <fragment
+        android:id="@+id/otarFragment"
+        android:name="com.example.techorbit.ui.fragment.OtarFragment"
+        android:label="fragment_otar"
+        tools:layout="@layout/fragment_otar" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.techorbit.ui.fragment.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_commisionFragment"
+            app:destination="@id/commisionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/commisionFragment"
+        android:name="com.example.techorbit.ui.fragment.CommisionFragment"
+        android:label="fragment_commision"
+        tools:layout="@layout/fragment_commision" />
+    <fragment
+        android:id="@+id/terminalsReportFragment"
+        android:name="com.example.techorbit.ui.fragment.TerminalsReportFragment"
+        android:label="fragment_terminals_report"
+        tools:layout="@layout/fragment_terminals_report" />
+    <fragment
+        android:id="@+id/purchaseReportFragment"
+        android:name="com.example.techorbit.ui.fragment.PurchaseReportFragment"
+        android:label="fragment_purchase_report"
+        tools:layout="@layout/fragment_purchase_report" />
+    <fragment
+        android:id="@+id/receiptReportFragment"
+        android:name="com.example.techorbit.ui.fragment.ReceiptReportFragment"
+        android:label="fragment_receipt_report"
+        tools:layout="@layout/fragment_receipt_report" />
+    <fragment
+        android:id="@+id/merchantReportFragment"
+        android:name="com.example.techorbit.ui.fragment.MerchantReportFragment"
+        android:label="fragment_merchant_report"
+        tools:layout="@layout/fragment_merchant_report" />
+    <fragment
+        android:id="@+id/vendorOutstandingFragment"
+        android:name="com.example.techorbit.ui.fragment.VendorOutstandingFragment"
+        android:label="fragment_vendor_outstanding"
+        tools:layout="@layout/fragment_vendor_outstanding" />
+    <fragment
+        android:id="@+id/searchTransactionInnerFragment"
+        android:name="com.example.techorbit.SearchTransactionInnerFragment"
+        android:label="fragment_search_transaction_inner"
+        tools:layout="@layout/fragment_search_transaction_inner" />
+    <fragment
+        android:id="@+id/inventoryReportFragment"
+        android:name="com.example.techorbit.InventoryReportFragment"
+        android:label="fragment_inventory_report"
+        tools:layout="@layout/fragment_inventory_report" />
+    <fragment
+        android:id="@+id/walletReportFragment"
+        android:name="com.example.techorbit.WalletReportFragment"
+        android:label="fragment_wallet_report"
+        tools:layout="@layout/fragment_wallet_report" />
+    <fragment
+        android:id="@+id/rechargeTerminalReportFragment"
+        android:name="com.example.techorbit.RechargeTerminalReportFragment"
+        android:label="fragment_recharge_terminal_report"
+        tools:layout="@layout/fragment_recharge_terminal_report" />
+    <fragment
+        android:id="@+id/rechargeTerminalReportFragment2"
+        android:name="com.example.techorbit.RechargeTerminalReportFragment"
+        android:label="fragment_recharge_terminal_report"
+        tools:layout="@layout/fragment_recharge_terminal_report" />
+    <fragment
+        android:id="@+id/gamesAndGiftCards"
+        android:name="com.example.techorbit.ui.fragment.GamesAndGiftCards"
+        android:label="fragment_games_and_gift_cards"
+        tools:layout="@layout/fragment_games_and_gift_cards" >
+        <action
+            android:id="@+id/action_gamesAndGiftCards_to_evoucherFragment"
+            app:destination="@id/evoucherFragment" />
+    </fragment>
+</navigation>

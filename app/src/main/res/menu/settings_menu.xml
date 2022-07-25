@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/profile_group"
+        android:checkableBehavior="single">
+        <item
+            android:icon="@drawable/ic_bluetooth"
+            android:id="@+id/bluetoothsettings"
+            android:title="Bluetooth settings" />
+    </group>
+    <group
+        android:id="@+id/pin_group"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/pin"
+            android:icon="@drawable/search"
+            android:title="Nfc Settings" />
+    </group>
+    <group
+        android:id="@+id/change_pass_group"
+        android:checkableBehavior="single">
+        <item
+            android:icon="@drawable/ic_printer"
+            android:id="@+id/changePassword"
+            android:title="Printer settup" />
+    </group>
+    <group
+        android:id="@+id/complaint_group"
+        android:checkableBehavior="single">
+        <item
+            android:icon="@drawable/ic_printer"
+            android:id="@+id/testprint"
+            android:title="Test Print" />
+    </group>
+
+    <group
+        android:id="@+id/clean_app"
+        android:checkableBehavior="single">
+        <item
+            android:icon="@drawable/ic_baseline_cleaning_services_24"
+            android:id="@+id/clean_data"
+            android:title="Clean App" />
+    </group>
+
+
+
+
+
+
+
+</menu>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.techorbit">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission
+        android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"
+        tools:ignore="ProtectedPermissions" />
+
+    <application
+        android:name=".TechorbitApplicaton"
+        android:allowBackup="true"
+        android:largeHeap="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="m">
+<!--        <activity android:name=".ui.activity.Test">-->
+
+<!--        </activity>-->
+        <activity android:name=".ui.activity.ProviderListActivity" />
+        <activity android:name=".ui.activity.InternationalRechargeConfirmation" />
+        <activity android:name=".ui.activity.ConfirmationActivity" />
+        <activity android:name=".ui.activity.EvoucherConfirmation" />
+        <activity android:name=".ui.activity.EvoucherSuccess" />
+        <activity android:name=".ui.activity.EvoucherPlans" />
+        <activity android:name=".ui.activity.InternationalRechargePlans" />
+        <activity android:name=".ui.activity.SignUpActivity" />
+        <activity android:name=".ui.splash.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".utils.ScanActivity"/>
+        <activity android:name=".utils.DeviceListActivity"/>
+        <activity
+            android:name=".ui.activity.HomeActivity"
+            android:windowSoftInputMode="adjustPan" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

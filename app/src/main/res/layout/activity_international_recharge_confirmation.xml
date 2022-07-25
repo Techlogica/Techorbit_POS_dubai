@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_recharge">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/recharge_confrm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="International Recharge"
+        app:layout_constraintLeft_toLeftOf="@+id/image"
+        app:layout_constraintRight_toRightOf="@id/image"
+        app:layout_constraintTop_toBottomOf="@+id/image" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        app:cardCornerRadius="10dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintTop_toBottomOf="@+id/title_head">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/status_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/success"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/status_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recharge Succes"
+                android:textColor="@color/green"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="@+id/status_image"
+                app:layout_constraintRight_toRightOf="@id/status_image"
+                app:layout_constraintTop_toBottomOf="@+id/status_image" />
+
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/head"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="5dp"-->
+            <!--                android:gravity="center"-->
+            <!--                android:text="@string/srachcard_recharge"-->
+            <!--                android:textColor="@color/black"-->
+            <!--                android:textSize="20sp"-->
+            <!--                android:textStyle="bold"-->
+            <!--                app:layout_constraintLeft_toLeftOf="@+id/success_image"-->
+            <!--                app:layout_constraintRight_toRightOf="@id/success_image"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/success_image" />-->
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/coupon_id"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="5dp"-->
+            <!--                android:gravity="center"-->
+            <!--                android:text="ID:MR245"-->
+            <!--                android:textSize="15sp"-->
+            <!--                android:textStyle="bold"-->
+            <!--                app:layout_constraintLeft_toLeftOf="@+id/head"-->
+            <!--                app:layout_constraintRight_toRightOf="@id/head"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/head" />-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/status_text">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:text="Beneficiary\nNumber:"
+                        android:textColor="@color/red"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/number"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_weight="1"
+                        android:gravity="bottom|end"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/red" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:text="Operator:"
+                        android:textColor="@color/red"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/operator_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_weight="1"
+                        android:gravity="bottom|end"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/red" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:text="Recharge\nAmount"
+                        android:textColor="@color/red"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/amount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_weight="1"
+                        android:gravity="end"
+
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/red" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:text="Payable\nAmount"
+                        android:textColor="@color/red"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/uae_amount"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:layout_weight="1"
+                        android:gravity="center|end"
+                        android:text="AED 210"
+                        android:textColor="@color/red"
+                        android:textSize="15sp" />
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/deviceid"
+                    android:layout_width="wrap_content"
+                    android:textSize="15sp"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/confirmation_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/please_confirm"
+                    android:visibility="visible">
+
+                </TextView>
+
+
+                <LinearLayout
+                    android:id="@+id/linear_confirmation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="50dp"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    android:padding="10dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/cancel_button"
+                        style="@style/TextAppearance.MaterialComponents.Button"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/dark_grey"
+                        android:text="cancel"
+                        android:textColor="@color/white"
+                        app:cornerRadius="15dp"
+                        app:rippleColor="@color/red" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/confirm"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/red"
+                        android:text="confirm"
+                        android:textColor="@color/white"
+                        app:cornerRadius="15dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_success"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="50dp"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:visibility="gone">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/success_button"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/green"
+                        android:text="Finish"
+                        android:textColor="@color/white"
+                        app:cornerRadius="15dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/print"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/red"
+                        android:text="Print"
+                        android:textSize="15sp"
+                        android:textColor="@color/white"
+                        app:cornerRadius="15dp" />
+                </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/another"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/red"
+                    android:text="Do Another Recharge"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:visibility="gone"
+                    app:cornerRadius="15dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/tryrecharge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/red"
+                    android:text="Try Again"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:visibility="gone"
+                    app:cornerRadius="15dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/checkStatusInternational"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/red"
+                    android:text="Check status"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:visibility="gone"
+                    app:cornerRadius="15dp" />
+
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/progress_circular"
+        style="Widget.MaterialComponents.CircularProgressIndicator.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:indeterminate="true"
+        android:visibility="gone"
+        app:indicatorColor="@color/white"
+       android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="data"
+            type="com.example.techorbit.model.reports.walletreports.Data" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/main_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/boreder_grey"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="10dp">
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{data.creditDebit}"
+            android:textStyle="bold"
+            android:fontFamily="@font/robotobold"
+            android:textColor="@color/white"
+            android:padding="5dp"/>
+        <TextView
+            android:id="@+id/balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{`AED:`+data.amount}"
+            android:textStyle="bold"
+            android:fontFamily="@font/robotobold"
+            android:textColor="@color/white"
+            android:layout_below="@+id/status"
+            android:padding="5dp"/>
+    </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{data.narration}"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@+id/relativeLayout"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/trasaction_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="2dp"
+        android:fontFamily="@font/robotobold"
+        android:text="@{`id:`+String.valueOf(data.transactionId)}"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_relative_layout"/>
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="@{data.createdTime}"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="2dp"
+        android:fontFamily="@font/robotobold"
+        app:layout_constraintTop_toBottomOf="@+id/main_relative_layout"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
